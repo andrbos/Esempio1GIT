@@ -24,5 +24,21 @@ namespace GIT_es1
         {
             InitializeComponent();
         }
+
+        private void btnMedia_Click(object sender, RoutedEventArgs e)
+        {
+            double[] v = new double[10];
+
+            Random rnd = new Random();
+            for (int i = 0; i < 10; i++)
+                v[i] = rnd.Next(0,100);
+
+            double somma = 0;
+
+            for (int i=0; i<10; i++)
+                somma += v[i];
+
+            lblMedia.Content = somma / 10;
+        }
     }
 }
